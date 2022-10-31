@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root{
+    /* || COLORS */
+    --MENU-ITEMS-COLOR: whitesmoke;
+    --RADIAL-BGCOLOR: linear-gradient(to bottom ,rgb(29, 25, 25), #333);
+    --FORM-BGCOLOR: rgb(99, 83, 146);
+    --FORM-TITLE-COLOR: #ffffd2;
+    --FORM-TEXT-COLOR: black;
+    --TALBE-BORDER-COLOR: #333;
+    --REMARK-COLOR: rgb(214, 12, 12);
+    --TABLE-HEAD-BGCOLOR: rgb(195, 136, 27);
+    --TABLE-BODY-BGCOLOR: wheat;
+}
+
+/* || UTILITY CLASSES */
+.offscreen{
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap{
+    white-space: nowrap;
+}
+
+.center{
+    text-align: center;
+}
+
+.rounded{
+    border-radius: 10px;
+}
+
+.bottom-rounded{
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.shadow-hr{
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* GENERAL STYLES */
+html{
+    font-size: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    min-width: 300px;
+    background-image: var(--RADIAL-BGCOLOR);
+}
+
+/* || CLASSES */
+.table,
+.table-head,
+.table-row,
+.table-header,
+.table-data{
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    padding: 0.5rem;  
+}
+
+
+.table-header{
+    border-right: 1px solid var(--TABLE-HEAD-BGCOLOR);
+}
+
+.table-header:last-child,
+.table-row .table-data:last-child{
+    border: none;
+}
+
+.table{
+    width: 100%;
+}
+
+.table-row{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.table-body .table-row{
+    border-bottom: 1px solid var(--TABLE-BODY-BGCOLOR);
+}
+
+.table-head{
+    background-color: var(--TABLE-HEAD-BGCOLOR);
+    border-bottom: 1px solid var(--TALBE-BORDER-COLOR);
+}
+
+.table-header:first-child{
+    border-top-left-radius: 10px;
+}
+
+.table-header:last-child{
+    border-top-right-radius: 10px;
+}
+
+.table-data{
+    text-align: center;
+    font-weight: bold;
+    border-right: 1px solid var(--TABLE-BODY-BGCOLOR);
+    width: 33.3%;
+}
+
+.table-body{
+    background-color: var(--TABLE-BODY-BGCOLOR);
+}
+
+.table-body tr:last-child td:first-child{
+    border-bottom-left-radius: 10px;
+}
+
+.table-body tr:last-child td:last-child{
+    border-bottom-right-radius: 10px;
+}
+
+.table-body tr:last-child{
+    border: none;
+}
+
+.table__input{
+    width: 100%;
+    padding: 3px 0;
+    font-size: medium;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+.table-buttons{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.add-btn,
+.delete-btn{
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    flex-grow: 1;
+    width: calc(25% - 0.5rem);
+}
+
+.total-tips-input{
+    margin: 0.2rem 0.5rem;
+    width: 50%;
+    height: 41px;
+    flex-grow: 1;
+    font-size: large;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.add-btn{
+    background-color: #1e6020;
+}
+
+.delete-btn{
+    background-color: rgb(136, 32, 32);
+}
+
+/* calculations */
+.calculation{
+    border: 1px solid #eee;
+    border-radius: 10px;
+    color: white;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.calculation p{
+    margin-bottom: 10px;
+}
+
+.calculation p:last-child{
+    margin-bottom: 0;
+}
+
+
+/* || ELEMENTS */
+
+
+/* || MODIFIERS */
+
+
+.form{
+    padding: 0.5em;
+    /* background-color: rgba(98, 68, 129, 0.839); */
+    background-color: var(--FORM-BGCOLOR);
+    border-radius: 10px;
+    color: var(--FORM-TEXT-COLOR);
+    font-weight: bold;
+}
+
+.form__input{
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-size: large;
+}
+
+.form__btn,
+.calculate-btn{
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+}
+
+.form__btn{
+    background-color: #4CAF50;
+    width: 50%;
+    border-radius: 4px;
+}
+
+.form__btn:hover, .form__btn:focus{
+    background-color: #45a049;
+}
+
+.calculate-btn{
+    width: 60%;
+    background-color: rgb(85, 40, 130);
+    border-radius: 7px;
+    max-width: 400px;
+}
+
+.calculate-btn:hover{
+    background-color: rgb(112, 28, 202);
+}
+
+
+
+.flex-btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    padding: 0.5rem;
+}
+
+legend{
+    font-size: 38px;
+    color: var(--FORM-TITLE-COLOR);
+}
+
+fieldset{
+    border: none;
+}
+
+
+/* snackbar */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 300px; /* Set a default minimum width */
+    transform: translateX(-50%); /* center the snackbar */
+    background-color: rgba(251, 255, 0, 0.955); /* White background color */
+    /* rgba(251, 255, 0, 0.955) */
+    color: #333; /* Black text color */
+    text-align: center; /* Centered text */
+    border-radius: 10px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    font-weight: bold;
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+
+/* || SMALL */
+/* settings for screens with screen size 576px and above */
+@media screen and (min-width: 576px) {
+    .container{
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    .table-role{
+        width: 100px;
+      }
+}
+
+/* ||MEDIUM */
+@media screen and (min-width: 768px) {
+    .container{
+        padding-right: 3rem;
+        padding-left: 3rem;
+    }
+
+    .table .table-role{
+        width: 150px;
+      }
+  }
+
+/* || LARGE */
+@media screen and (min-width: 992px) {
+    .container{
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+
+    .table .table-role{
+        width: 100%;
+      }
+  }
+
+/* || XL  */
+@media screen and (min-width: 1200px) {
+    .container{
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+  }
+
+
+
+  /* || PERCENTAGE CALUCLATOR */
+
+  .table-explanation-btn{
+    border-radius: 50%;
+    border: none;
+  }
+
+  .tool-tip{
+    position: relative;
+  }
+
+  .tool-tip:hover::before{
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -35px;
+    /* in order to avoid wrap of the absolute position words */
+    white-space: nowrap;
+    background-color: wheat;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  /* || ALL STAFF CALCULATOR */
+  .table-role{
+    padding: 5px 0;
+    border-radius: 5px;
+    /* width: 75px; */
+    width: fit-content;
+  }
+
+  /* || POINTS CALCULATOR */
+  .remark{
+    color: var(--REMARK-COLOR);
+    font-size: 0.7rem;
+    margin-bottom: 15px;
+    
+  }
+
+
+
+
+
+

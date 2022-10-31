@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root{
+    /* || COLORS */
+    --BGCOLOR: #333;
+    --HEADER-COLOR: wheat;
+    --HEADER-BGCOLOR: rgb(229, 138, 10);
+    --FOOTER-BGCOLOR: black;
+    --FIGCAPTION-COLOR: whitesmoke;
+    --SUBHEADER-COLOR: whitesmoke;
+    --SUBHEADER-P-COLOR: white;
+    --INNER-LINK-COLOR: rgb(215, 135, 16);
+    --REMARK-COLOR: rgb(214, 12, 12);
+    --FOOTER-LINK-COLOR: white;
+
+    /* || FONTS */
+    --HEADER-FONT-SIZE: 2.5rem;
+    --FOOTER-FONT-SIZE: 1.5rem;
+    --SUBHEADER-FONT-SIZE: 2rem;
+    --REMARK-FONT-SIZE: 1.2rem;
+
+    /* || MARGIN */
+    --IMG-MARGIN-TOP: 10px;
+    --SUBHEADER-MARGIN-TOP: 10px;
+    --REMARK-MARGIN-TOP: 50px;
+    --SECTION-END-MARGIN-BOTTOM: 30px;
+    --SECTION-SECOND-EL-MARGIN-TOP: 20px;
+
+    /* || GENERAL */
+    --CONTAINER-PADDING: 0.5rem;
+    --SUBHEADER-P-PADDING:0.5rem;
+}
+
+/* || UTILITY CLASSES */
+
+.offscreen{
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap{
+    white-space: nowrap;
+} 
+
+/* GENERAL STYLES */
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+    
+}
+
+body{
+    background-color: var(--BGCOLOR);
+}
+
+footer,header{
+    text-align: center;
+}
+
+header{
+    color: var(--HEADER-COLOR);
+    position: sticky;
+    top: 0;
+    font-size: var(--HEADER-FONT-SIZE);
+    height: min(60px, auto);
+    background-color: var(--HEADER-BGCOLOR);
+}
+
+footer{
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: var(--FOOTER-BGCOLOR);
+    position: sticky;
+    justify-content: space-evenly;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    font-size: var(--FOOTER-FONT-SIZE);
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: var(--IMG-MARGIN-TOP);
+}
+
+/* || CLASSES */
+
+.figcaption-bottom,
+.figcaption-up{
+    color: var(--FIGCAPTION-COLOR);
+    font-size: min(1.2rem, 30vw);
+    line-height: 1.5;
+}
+
+.figcaption-bottom{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.figcaption-up{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.container-center,
+.container-start{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: var(--CONTAINER-PADDING);
+}
+
+.container-center{
+    align-items: center;
+}
+
+.container-start{
+    align-items: start;
+}
+
+.sub-header{
+    color: var(--SUBHEADER-COLOR);
+    font-size: var(--SUBHEADER-FONT-SIZE);
+    margin-top: var(--SUBHEADER-MARGIN-TOP);
+    text-align: center;
+    width: 50%;
+    /* centers the element */
+    margin: auto;
+    word-wrap: break-word;
+}
+
+.sub-header-p{
+    text-align: center;
+    color: var(--SUBHEADER-P-COLOR);
+    font-size: min(1.2rem, 30vw);
+    line-height: 1.5;
+    padding: var(--SUBHEADER-P-PADDING);
+    max-width: 850px;
+}
+
+.sub-header:after {
+    content:' ';
+    display:block;
+    border:2px solid #d0d0d0;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.inner-link:link,
+.inner-link:visited,
+.inner-link:hover,
+.inner-link:active{
+    color: var(--INNER-LINK-COLOR);
+    text-decoration: none;
+}
+
+.custome-ul{
+    margin-left: 15px;
+}
+
+.little-circle{
+    font-size: 10px;
+    vertical-align: middle;
+    line-height: 2;
+}
+
+.remark{
+    color: var(--REMARK-COLOR);
+    font-size: var(--REMARK-FONT-SIZE);
+    margin-top: var(--REMARK-MARGIN-TOP);
+    text-align: center;
+    font-weight: bolder;
+}
+
+.little-image{
+    max-width: 40%;
+    align-items: flex-start;
+}
+
+.footer a:link, a:visited, a:hover, a:active{
+    color: var(--FOOTER-LINK-COLOR);
+}
+
+/* respobsible for margin bottom between every calculator section */
+.settings,
+.waiters-calculator,
+.percentage-calculator,
+.all-staff-calculator,
+.points-calculator{
+    margin-bottom: var(--SECTION-END-MARGIN-BOTTOM);
+}
+
+/* responsible for the "How To Use" header matgin top */
+:is(.settings,
+.waiters-calculator,
+.percentage-calculator,
+.all-staff-calculator,
+.points-calculator) section:nth-child(2){
+    margin-top: var(--SECTION-SECOND-EL-MARGIN-TOP);
+}

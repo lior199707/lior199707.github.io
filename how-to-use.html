@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style-how-to-use.css" />
+    <title>How To Use</title>
+  </head>
+  <body>
+    <!-- <section class="how-to-use">
+      <h1 class="sub-header">How To Use</h1>
+      <div class="container-center"> -->
+    <section class="settings" id="settings">
+      <header>Settings</header>
+      <section id="settings-main-usage">
+        <h1 class="sub-header">Used For</h1>
+        <div class="container-center">
+          <p class="sub-header-p">
+            The settings are used to define different tips distribution
+            systems.<br />
+            after filling the settings and pressing the save button it will be
+            saved so each time you access the page the settingd will be loaded
+            automatically.
+          </p>
+        </div>
+      </section>
+      <section class="how-to-use">
+        <h1 class="sub-header" id="restaurant-affair">How To Use</h1>
+        <div class="container-center">
+          <figure>
+            <img
+              src="img/settings-images/settings-waiter-pays-1070X152.png"
+              alt="Waiter pays per hour"
+              title="Waiter pays per hour"
+              width="1070"
+              height="152"
+            />
+            <figcaption class="figcaption-bottom">
+              Used to define a fixed amount of money a waiter pays the
+              restaurant per hour.<br />
+              Will be used for calculating "To The Restaurant" affair.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="img/settings-images/settings-kitchen-tips-percentage-1082X146.png"
+              alt="Percentage for kitchen"
+              title="Percentage for kitchen"
+              width="1082"
+              height="146"
+            />
+            <figcaption class="figcaption-bottom">
+              Used to define a percentage of the total tips that goes to the
+              kitchen staff.<br />
+              Will be used for calculating "To Kitchen" affair.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="img/settings-images/settings-bartenders-tips-percentage-1080X148.png"
+              alt="Percentage for bartender"
+              title="Percentage for bartenders"
+              width="1080"
+              height="148"
+            />
+            <figcaption class="figcaption-bottom">
+              Used to define a percentage of the total tips that goes to the
+              bartenders.<br />
+              Will be used for calculating "To Bartenders" affair.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="img/settings-images/settings-shift-manager-tips-percentage-1076X142.png"
+              alt="Percentage for shift manager"
+              title="Percentage for shift manager"
+              width="1076"
+              height="142"
+              loading="lazy"
+            />
+            <figcaption class="figcaption-bottom">
+              Used to define a percentage of the total tips that goes to the
+              shift manager.<br />
+              Will be used for calculating "To Shift Manager" affair.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="img/settings-images/settings-busser-tips-percentage-1074X146.png"
+              alt="Percentage for busser"
+              title="Percentage for busser"
+              width="1074"
+              height="146"
+              loading="lazy"
+            />
+            <figcaption class="figcaption-bottom">
+              Used to define a percentage of the total tips that goes to the
+              busser.<br />
+              Will be used for calculating "To Busser" affair.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="img/settings-images/settings-expo-tips-percentage-1080X146.png"
+              alt="Percentage for expo"
+              title="Percentage for expo"
+              width="1080"
+              height="146"
+              loading="lazy"
+            />
+            <figcaption class="figcaption-bottom">
+              Used to define a percentage of the total tips that goes to the
+              expo.<br />
+              Will be used for calculating "To Expo" affair.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="img/settings-images/settings-runners-tips-percentage-1078X144.png"
+              alt="Percentage for runners"
+              title="Percentage for runners"
+              width="1078"
+              height="144"
+              loading="lazy"
+            />
+            <figcaption class="figcaption-bottom">
+              Used to define a percentage of the total tips that goes to the
+              runners.<br />
+              Will be used for calculating "To Runners" affair.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="img/settings-images/settings-hostess-tips-percentage-1072X146.png"
+              alt="Percentage for hostess"
+              title="Percentage for hostess"
+              width="1072"
+              height="146"
+              loading="lazy"
+            />
+            <figcaption class="figcaption-bottom">
+              Used to define a percentage of the total tips that goes to the
+              hostess.<br />
+              Will be used for calculating "To Hostess" affair.
+            </figcaption>
+          </figure>
+          <p class="remark">
+            After each settings change click the save button below the settings
+            otherwise the new settings won't apply.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- Waiters Calculator How To Use Section -->
+
+    <section class="waiters-calculator" id="waiters-calculator">
+      <header>Waiters Calculator</header>
+      <!-- waiters calculator main usage -->
+      <section id="waiters-calc-main-usage">
+        <h1 class="sub-header">Used For</h1>
+        <div class="container-center">
+          <!-- TODO: add a class for all the text that is bigger -->
+          <p class="sub-header-p">
+            The "Waiters Calculator" can be used in restaurants that work on a
+            mutual tips/tips sharing system.
+            <br />
+            <br />
+            Calculates the amount of money that each role earned based on the
+            <a class="inner-link" href="#settings">settings</a> you defined ,
+            deducts it from the total tips and distribute the remaining money
+            between the servers by their work hours.
+          </p>
+        </div>
+      </section>
+      <!-- waiters calculator how to use -->
+      <section class="how-to-use">
+        <h1 class="sub-header">How To Use</h1>
+        <div class="container-center">
+          <figure>
+            <figcaption class="figcaption-up">
+              First set your settings and click the save button.<br />
+              In below example we set:<br />
+              <div class="custome-ul">
+                <span class="little-circle">🟣</span> The amount a waiter pays
+                the restaurant per hour: 2<br />
+                <span class="little-circle">🟣</span> The percentage for the
+                kitchen staff: 15%<br />
+                <span class="little-circle">🟣</span> The percentage for the
+                hostess: 5%<br />
+                <span class="little-circle">🟣</span> Everything else to: 0<br />
+              </div>
+            </figcaption>
+
+            <img
+              src="img/how-to-use-images/waiters-calculator/settings-img-766X826.png"
+              alt="define settings"
+              title="define settings"
+              width="766"
+              height="826"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Use this button to add rows to the waiters table
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/addrow-img-714X204.png"
+              alt="add row button"
+              title="add row button"
+              width="766"
+              height="204"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Use this button to delete the last row in the waiters table
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/deleterow-img-716X214.png"
+              alt="delete row button"
+              title="delete row button"
+              width="766"
+              height="214"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Fill the total tips input field with the tips was earned on the
+              shift
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/total-tips-input-img-538X138.png"
+              alt="delete row button"
+              title="delete row button"
+              width="766"
+              height="138"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Fill the waiters table with the waiters names(optioanl) and
+              waiters hours(required)
+            </figcaption>
+            <img
+              src="img/how-to-use-images/waiters-calculator/waiters-table-img-548X332.png"
+              alt="calculate button"
+              title="calculate button"
+              width="766"
+              height="332"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Press the calculate button on the bottom of the page and see how
+              much money<br />
+              each waiter earned under the "Amount" column in the table
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/calculate-button-img-630X132.png"
+              alt="calculate button"
+              title="calculate button"
+              width="766"
+              height="132"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Watch the results:
+              <div class="custome-ul">
+                <span class="little-circle">🟣</span> Total Hours - total
+                waiters hours<br />
+                <span class="little-circle">🟣</span> Per Hour - the money a
+                waiter earned per hour of work<br />
+                <span class="little-circle">🟣</span> To The Restaurant -
+                calculated by
+                <span class="nowrap"
+                  >Total Hours X
+                  <a class="inner-link" href="#restaurant-affair"
+                    >restaurant per hour</a
+                  ></span
+                ><br />
+                <span class="little-circle">🟣</span> Everything else: the
+                amount of money goes to the relevant role based on the
+                <a class="inner-link" href="#settings">settings</a><br />
+              </div>
+            </figcaption>
+            <img
+              src="img/how-to-use-images/waiters-calculator/affairs-img-660X682.png"
+              alt="calcualte button"
+              title="calculate button"
+              width="766"
+              height="682"
+              loading="lazy"
+            />
+          </figure>
+          <p class="remark">
+            If you want to distribute the money equaly between the staff
+            (according to their hours of work) set all
+            <a class="inner-link" href="#settings">settings</a>
+            to 0 and add all the employees to the waiters table.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <!-- Start of percentage calculator section -->
+
+    <section class="percentage-calculator" id="percentage-calculator">
+      <header>Percentage Calculator</header>
+      <section id="percentage-calc-main-usage">
+        <h1 class="sub-header">Used For</h1>
+        <div class="container-center">
+          <!-- TODO: add a class for all the text that is bigger -->
+          <p class="sub-header-p">
+            The "Percentage Calculator" can be used in restaurants that work on
+            a mutual tips/tips sharing system and waiters have different tips
+            percentage<br />(For example in sheff restaurants new waiters earn
+            70% of the per hour earnings and senior waiters earn 100%)
+            <br />
+            <br />
+            Calculates the amount of money that each role earned based on the
+            <a class="inner-link" href="#settings">settings</a> you defined ,
+            deducts it from the total tips and distribute the remaining money
+            between the servers by their work hours and the percentage set to
+            them.
+          </p>
+        </div>
+      </section>
+      <!-- percentage calculator how to use -->
+      <section class="how-to-use">
+        <h1 class="sub-header">How To Use</h1>
+        <div class="container-center">
+          <figure>
+            <figcaption class="figcaption-up">
+              First set your settings and click the save button.<br />
+              In below example we set:<br />
+              <div class="custome-ul">
+                <span class="little-circle">🟣</span> The amount a waiter pays
+                the restaurant per hour: 2<br />
+                <span class="little-circle">🟣</span> The percentage for the
+                kitchen staff: 15%<br />
+                <span class="little-circle">🟣</span> The percentage for the
+                hostess: 5%<br />
+                <span class="little-circle">🟣</span> Everything else to: 0<br />
+              </div>
+            </figcaption>
+
+            <img
+              src="img/how-to-use-images/waiters-calculator/settings-img-766X826.png"
+              alt="define settings"
+              title="define settings"
+              width="766"
+              height="826"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Use this button to add rows to the waiters table
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/addrow-img-714X204.png"
+              alt="add row button"
+              title="add row button"
+              width="766"
+              height="204"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Use this button to delete the last row in the waiters table
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/deleterow-img-716X214.png"
+              alt="delete row button"
+              title="delete row button"
+              width="766"
+              height="214"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Fill the total tips input field with the tips was earned on the
+              shift
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/total-tips-input-img-538X138.png"
+              alt="delete row button"
+              title="delete row button"
+              width="766"
+              height="138"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Fill the waiters table with the waiters names(optioanl), waiters
+              hours(required)<br />
+              and the percentage(required)
+            </figcaption>
+            <img
+              src="img/how-to-use-images/percentage-calculator/waiters-table-image-654X342.png"
+              alt="waiters table"
+              title="waiters table"
+              width="766"
+              height="342"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Press the calculate button on the bottom of the page and see how
+              much money<br />
+              each waiter earned under the "💵" column in the table
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/calculate-button-img-630X132.png"
+              alt="calculate button"
+              title="calculate button"
+              width="766"
+              height="132"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Watch other roles earnings:
+              <div class="custome-ul">
+                <span class="little-circle">🟣</span> Total Hours - total
+                waiters hours<br />
+                <span class="little-circle">🟣</span> Per Hour - the money a
+                waiter earned per hour of work<br />
+                <span class="little-circle">🟣</span> To The Restaurant -
+                calculated by
+                <span class="nowrap"
+                  >Total Hours X
+                  <a class="inner-link" href="#settings"
+                    >restaurant per hour</a
+                  ></span
+                ><br />
+                <span class="little-circle">🟣</span> Everything else: the
+                amount of money goes to the relevant role based on the
+                <a class="inner-link" href="#settings">settings</a><br />
+              </div>
+            </figcaption>
+            <img
+              src="img/how-to-use-images/waiters-calculator/affairs-img-660X682.png"
+              alt="calcualte button"
+              title="calculate button"
+              width="766"
+              height="682"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+    </section>
+    <section class="all-staff-calculator" id="all-staff-calculator">
+      <header>Staff Calculator</header>
+      <section id="staff-calc-main-usage">
+        <h1 class="sub-header">Used For</h1>
+        <div class="container-center">
+          <!-- TODO: add a class for all the text that is bigger -->
+          <p class="sub-header-p">
+            The "Staff Calculator" can be used in restaurants that work on a
+            mutual tips/tips sharing system, each staff role(except waiters) has
+            a specific percentage of the total tips.<br />
+            The calculator presents the revenue per role per person in said role
+            based on their hours of work.<br />
+            For example lets say a restaurant has 3 runners and the runners get
+            10% of total tips, lets say the total tips are 1000$ so the runners
+            have earned 150$ in tip, the calculator will distribute the money
+            between the runners according to their hours of work.
+            <!-- the total role revenue is distributed between the employees assigned to the role  -->
+            <br />
+            <br />
+            Calculates the salary each role earned based on the
+            <a class="inner-link" href="#settings">settings</a> you defined ,
+            calculates the per hour earnings of each role by dividing the total
+            role revenue by the total role hours, and calculates how much an
+            employee gets by multyplying the per hour earnings by the hours of
+            work.
+          </p>
+        </div>
+      </section>
+      <!-- percentage calculator how to use -->
+      <section class="how-to-use">
+        <h1 class="sub-header">How To Use</h1>
+        <div class="container-center">
+          <figure>
+            <figcaption class="figcaption-up">
+              First set your settings and click the save button.<br />
+              In below example we set:<br />
+              <div class="custome-ul">
+                <span class="little-circle">🟣</span> The amount a waiter pays
+                the restaurant per hour: 2<br />
+                <span class="little-circle">🟣</span> The percentage for the
+                kitchen staff: 15%<br />
+                <span class="little-circle">🟣</span> The percentage for the
+                hostess: 5%<br />
+                <span class="little-circle">🟣</span> Everything else to: 0<br />
+              </div>
+            </figcaption>
+
+            <img
+              src="img/how-to-use-images/waiters-calculator/settings-img-766X826.png"
+              alt="define settings"
+              title="define settings"
+              width="766"
+              height="826"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Use this button to add rows to the staff table
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/addrow-img-714X204.png"
+              alt="add row button"
+              title="add row button"
+              width="766"
+              height="204"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Use this button to delete the last row in the staff table
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/deleterow-img-716X214.png"
+              alt="delete row button"
+              title="delete row button"
+              width="766"
+              height="214"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Fill the total tips input field with the tips was earned on the
+              shift
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/total-tips-input-img-538X138.png"
+              alt="delete row button"
+              title="delete row button"
+              width="766"
+              height="138"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Fill the staff table with the role of the employee(required),
+              employee name(optioanl)<br />and employee hours(required)
+            </figcaption>
+            <img
+              src="img/how-to-use-images/staff-calculator/staff-table-img-664X346.png"
+              alt="waiters table"
+              title="waiters table"
+              width="766"
+              height="346"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Press the calculate button on the bottom of the page and see how
+              much money<br />
+              each employee earned under the "💵" column in the table
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/calculate-button-img-630X132.png"
+              alt="calculate button"
+              title="calculate button"
+              width="766"
+              height="132"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Watch every role information:
+              <div class="custome-ul">
+                <p>
+                  <span class="little-circle">🟣</span> To The Restaurant -
+                  calculated by
+                  <span class="nowrap"
+                    >Total Hours X
+                    <a class="inner-link" href="#settings"
+                      >restaurant per hour</a
+                    ></span
+                  >
+                </p>
+                <p>
+                  <span class="little-circle">🟣</span> Total Role Hours - total
+                  hours of said role employees
+                </p>
+                <p>
+                  <span class="little-circle">🟣</span> Role Per Hour - the
+                  money an employee of said role earned per hour of work
+                </p>
+              </div>
+            </figcaption>
+            <img
+              src="img/how-to-use-images/staff-calculator/affairs-img-660X1130.png"
+              alt="calcualte button"
+              title="calculate button"
+              width="766"
+              height="1130"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+    </section>
+
+    <!-- Points Calculator -->
+
+    <section class="points-calculator" id="points-calculator">
+      <header>Points Calculator</header>
+      <section id="points-calc-main-usage">
+        <h1 class="sub-header">Used For</h1>
+        <div class="container-center">
+          <!-- TODO: add a class for all the text that is bigger -->
+          <p class="sub-header-p">
+            The "Points Calculator" can be used in restaurants that share their
+            tips between employees by assigning each employee a certain number
+            of points which his daily tips earnings will be calculated by.<br />
+            <span class="red"
+              >This calculator ignores the
+              <a class="inner-link" href="#settings">settings</a>
+            </span>
+            <br />
+            <br />
+            Takes the total amount of tips divides it by the total sum of the
+            employees' points in order to find the per point revenue.<br />
+            Calculates employees daily salary by multiplying the per point
+            revenue by the employee's points.
+          </p>
+        </div>
+      </section>
+      <!-- points calculator how to use -->
+      <section class="how-to-use">
+        <h1 class="sub-header">How To Use</h1>
+        <div class="container-center">
+          <figure>
+            <figcaption class="figcaption-up">
+              Use this button to add rows to the staff table
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/addrow-img-714X204.png"
+              alt="add row button"
+              title="add row button"
+              width="766"
+              height="204"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Use this button to delete the last row in the staff table
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/deleterow-img-716X214.png"
+              alt="delete row button"
+              title="delete row button"
+              width="766"
+              height="214"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Fill the total tips input field with the tips was earned on the
+              shift
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/total-tips-input-img-538X138.png"
+              alt="delete row button"
+              title="delete row button"
+              width="766"
+              height="138"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Fill the staff table with the employees names(optioanl) and
+              employees points(required)
+            </figcaption>
+            <img
+              src="img/how-to-use-images/points-calculator/points-table-img-662X336.png"
+              alt="waiters table"
+              title="waiters table"
+              width="766"
+              height="336"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Press the calculate button on the bottom of the page and see how
+              much money<br />
+              each employee earned under the "Amount" column in the table
+            </figcaption>
+            <img
+              class="little-image"
+              src="img/how-to-use-images/waiters-calculator/calculate-button-img-630X132.png"
+              alt="calculate button"
+              title="calculate button"
+              width="766"
+              height="132"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <figcaption class="figcaption-up">
+              Watch calculation information:
+              <div class="custome-ul">
+                <p>
+                  <span class="little-circle">🟣</span> Total Points - total
+                  points of the employees
+                </p>
+                <p>
+                  <span class="little-circle">🟣</span> Per Point - money earned
+                  per point
+                </p>
+              </div>
+            </figcaption>
+            <img
+              src="img/how-to-use-images/points-calculator/calculation-info-656X170.png"
+              alt="calcualte button"
+              title="calculate button"
+              width="766"
+              height="170"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <a href="#waiters-calculator">Waiters</a>
+      <a href="#percentage-calculator">Percentage</a>
+      <a href="#all-staff-calculator">Staff</a>
+      <a href="#points-calculator">Points</a>
+    </footer>
+  </body>
+</html>

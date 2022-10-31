@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style-contact.css" />
+    <link rel="stylesheet" href="css/style-header.css" />
+
+    <title>Contact</title>
+  </head>
+  <body>
+    <header>
+      <section class="header__title-line">
+        <h1 class="title">Contact</h1>
+        <button class="header__btn">
+          <div class="header__btn--icon"></div>
+        </button>
+      </section>
+
+      <nav>
+        <ul>
+          <li><a href="how-to-use.html" target="_blank">How To Use</a></li>
+          <li><a href="index.html">Waiters Calculator</a></li>
+          <li>
+            <a href="percentage-calculator.html">Percentage Calculator</a>
+          </li>
+          <li><a href="all-staff-calculator.html">Staff Calculator</a></li>
+          <li><a href="points-calculator.html">Points Calculator</a></li>
+          <li>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.calculator.bbbcalculator"
+              >App(android only)</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container" id="contact-form">
+        <form id="form-el" onsubmit="sendEmail(); reset(); return false;">
+          <h3>GET IN TOUCH</h3>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email"
+          />
+          <p class="optional"><span class="little-circle">🔴</span> optional</p>
+          <textarea
+            name="message"
+            id="message"
+            rows="10"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <div class="btn-container">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        const body = `Name: ${document.getElementById("name").value}
+        <br> Email: ${document.getElementById("email").value}
+        <br> Message: ${document.getElementById("message").value}`;
+        Email.send({
+          SecureToken: "f5e316da-d270-4736-be6a-62c2c764a064",
+          To: "waiterscalculator^gmail.com".replace("^", "@"),
+          From: "waiterscalculator^gmail.com".replace("^", "@"),
+          Subject: "Waiters Calculator Form",
+          Body: body,
+        }).then((message) => alert(message));
+      }
+    </script>
+  </body>
+</html>

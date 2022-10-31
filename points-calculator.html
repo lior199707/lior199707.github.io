@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-header.css" />
+    <title>Points Calculator</title>
+  </head>
+  <body>
+    <header>
+      <section class="header__title-line">
+        <h1 class="title">Points Calculator</h1>
+        <button class="header__btn">
+          <div class="header__btn--icon"></div>
+        </button>
+      </section>
+
+      <nav>
+        <ul>
+          <li><a href="how-to-use.html" target="_blank">How To Use</a></li>
+          <li><a href="index.html">Waiters Calculator</a></li>
+          <li>
+            <a href="percentage-calculator.html">Percentage Calculator</a>
+          </li>
+          <li><a href="all-staff-calculator.html">Staff Calculator</a></li>
+          <li>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.calculator.bbbcalculator"
+              >App(android only)</a
+            >
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="form">
+          <form id="form">
+            <fieldset>
+              <legend>Settings:</legend>
+              <hr />
+              <br />
+              <p>
+                <label for="Waiter_pays_per_hour"
+                  >Waiter pays the restaurant per hour:</label
+                >
+              </p>
+              <!-- Waiter pays per hour -->
+              <p>
+                <input
+                  type="number"
+                  name="Waiter_pays_per_hour"
+                  id="Waiter_pays_per_hour"
+                  placeholder=""
+                  autocomplete="on"
+                  required
+                  class="form__input"
+                />
+              </p>
+              <!-- Percentage for kitchen -->
+              <p>
+                <label for="Percentage_for_kitchen"
+                  >Percentage of tips that goes to kitchen:</label
+                >
+              </p>
+              <p>
+                <input
+                  type="number"
+                  name="Percentage_for_kitchen"
+                  id="Percentage_for_kitchen"
+                  placeholder=""
+                  autocomplete="on"
+                  required
+                  class="form__input"
+                />
+              </p>
+              <!-- Percentage for bartenders -->
+              <p>
+                <label for="Percentage_for_bartenders"
+                  >Percentage of tips that goes to bartenders:</label
+                >
+              </p>
+              <p>
+                <input
+                  type="number"
+                  name="Percentage_for_bartenders"
+                  id="Percentage_for_bartenders"
+                  placeholder=""
+                  autocomplete="on"
+                  required
+                  class="form__input"
+                />
+              </p>
+              <!-- Percentage for shift manager -->
+              <p>
+                <label for="Percentage_for_shift_manager"
+                  >Percentage of tips that goes to shift manager:</label
+                >
+              </p>
+              <p>
+                <input
+                  type="number"
+                  name="Percentage_for_shift_manager"
+                  id="Percentage_for_shift_manager"
+                  placeholder=""
+                  autocomplete="on"
+                  required
+                  class="form__input"
+                />
+              </p>
+              <!-- Percentage for busser -->
+              <p>
+                <label for="Percentage_for_busser"
+                  >Percentage of tips that goes to busser:</label
+                >
+              </p>
+              <p>
+                <input
+                  type="number"
+                  name="Percentage_for_busser"
+                  id="Percentage_for_busser"
+                  placeholder=""
+                  autocomplete="on"
+                  required
+                  class="form__input"
+                />
+              </p>
+              <!-- Percentage for expo -->
+              <p>
+                <label for="Percentage_for_expo"
+                  >Percentage of tips that goes to expo:</label
+                >
+              </p>
+              <p>
+                <input
+                  type="number"
+                  name="Percentage_for_expo"
+                  id="Percentage_for_expo"
+                  placeholder=""
+                  autocomplete="on"
+                  required
+                  class="form__input"
+                />
+              </p>
+              <!-- Percentage for runners -->
+              <p>
+                <label for="Percentage_for_runners"
+                  >Percentage of tips that goes to runners:</label
+                >
+              </p>
+              <p>
+                <input
+                  type="number"
+                  name="Percentage_for_runners"
+                  id="Percentage_for_runners"
+                  placeholder=""
+                  autocomplete="on"
+                  required
+                  class="form__input"
+                />
+              </p>
+              <!-- Percentage for hostess -->
+              <p>
+                <label for="Percentage_for_hostess"
+                  >Percentage of tips that goes to hostess:</label
+                >
+              </p>
+              <p>
+                <input
+                  type="number"
+                  name="hostess"
+                  id="Percentage_for_hostess"
+                  placeholder=""
+                  autocomplete="on"
+                  required
+                  class="form__input"
+                />
+              </p>
+            </fieldset>
+            <br />
+            <div class="flex-btn-container">
+              <button id="save-btn" class="form__btn" type="submit">
+                Save
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <hr class="shadow-hr" />
+
+      <section class="container">
+        <p class="remark">* This calculator ignores the settings</p>
+        <div class="table-buttons">
+          <button class="add-btn" id="add-btn">ADD ROW</button>
+          <input
+            type="number"
+            id="total-tips-input"
+            class="total-tips-input"
+            placeholder="$Total Tips"
+          />
+          <button class="delete-btn" id="delete-btn">DELETE ROW</button>
+        </div>
+        <table id="table" class="table">
+          <thead class="table-head">
+            <tr class="table-row">
+              <th scope="col" class="table-header">Name</th>
+              <th scope="col" class="table-header">Points</th>
+              <th scope="col" class="table-header">Amount</th>
+            </tr>
+          </thead>
+          <tbody class="table-body" id="table-body">
+            <tr class="table-row">
+              <td class="table-data">
+                <input type="text" class="table__input" />
+              </td>
+              <td class="table-data">
+                <input type="number" class="table__input" />
+              </td>
+              <td class="table-data">0</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="container">
+        <section class="calculation">
+          <p id="total-points-text">Total Points:</p>
+          <p id="per-point-text">Per Point:</p>
+        </section>
+      </div>
+
+      <div class="container flex-btn-container">
+        <button id="calculate-btn" class="calculate-btn">Calculate</button>
+      </div>
+
+      <div id="snackbar"></div>
+    </main>
+
+    <footer></footer>
+    <script src="js/points-calculator.js"></script>
+  </body>
+</html>
