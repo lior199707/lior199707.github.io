@@ -184,26 +184,25 @@ deleteBtn.addEventListener("click", function(){
 let tableError = "";
 calculateBtn.addEventListener("click", function(){
     // deactivate buttons
-    addBtn.disabled = true;
-    deleteBtn.disabled = true;
+    deactivateTableButtons();
 
     if (!totalTipsInput.value){
-        showError("Please fill the Total Tips input field");
+        handleError("Please fill the Total Tips input field");
         return; 
      }
      if(totalTipsInput.value.includes('-')){
-        showError("Total tips can't be a negative number");
+        handleError("Total tips can't be a negative number");
         return;
      }
      if(tableErrorFound()){
-        showError(tableError);
+        handleError(tableError);
         tableError = "";
         return;
      }
     
     let totalTips = parseFloat(totalTipsInput.value);
     if(totalTips === 0){
-        showError("Total tips can't be 0");
+        handleError("Total tips can't be 0");
         return;
     }
     let waitersHoursArr = [];
@@ -214,7 +213,7 @@ calculateBtn.addEventListener("click", function(){
         totalHours += currHour;
     }
     if(totalHours === 0){
-        showError("Total waiters hours can't be 0");
+        handleError("Total waiters hours can't be 0");
         return;
     }
 
@@ -232,8 +231,7 @@ calculateBtn.addEventListener("click", function(){
     calculateWaitersWage(waitersHoursArr, perHour);
 
     // activate buttons
-    addBtn.disabled = false;
-    deleteBtn.disabled = false;
+    activateTableButtons();
 });
 
 function calculateAffairs(totalTips, totalHours){
@@ -306,6 +304,11 @@ function round(num, decimalPlace){
     return parseFloat(result);
 }
 
+function handleError(error){
+    showError(error);
+    activateTableButtons();
+}
+
 function showError(error){
   // Add the "show" class to DIV
   errorEl.textContent = error;
@@ -316,4 +319,14 @@ function showError(error){
     errorEl.className = errorEl.className.replace("show", "");
     errorEl.textContent = "";
 }, 3000);
+}
+
+function activateTableButtons(){
+    addBtn.disabled = false;
+    deleteBtn.disabled = false;
+}
+
+function deactivateTableButtons(){
+    addBtn.disabled = true;
+    deleteBtn.disabled = true;
 }

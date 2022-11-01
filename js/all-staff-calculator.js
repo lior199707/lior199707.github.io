@@ -153,6 +153,11 @@ function tableErrorFound(){
             tableError = "Table can't contain negative numbers";
             return true;
         }
+        //check if there is an hour section filled with 0
+        if(parseFloat(currHour) === 0){
+            tableError = "Table hours section can't be 0";
+            return true;
+        }
     }
     return false
 }
@@ -203,6 +208,7 @@ deleteBtn.addEventListener("click", function(){
 });
 
 // ||CALCULATIONS //
+
 let tableError = "";
 // will contain the row in the table which a worker with a specific role was found
 let waitersArr = [];
@@ -235,27 +241,26 @@ let totalHostessHours = 0;
 
 calculateBtn.addEventListener("click", function(){
     // deactivate buttons
-    addBtn.disabled = true;
-    deleteBtn.disabled = true;
+    deactivateTableButtons();
 
     
 
 
     if (!totalTipsInput.value){
-        showError("Please fill the Total Tips input field");
+        handleError("Please fill the Total Tips input field");
         return; 
     }
     if(totalTipsInput.value.includes('-')){
-        showError("Total tips can't be a negative number");
+        handleError("Total tips can't be a negative number");
         return;
     }
     let totalTips = parseFloat(totalTipsInput.value);
     if(totalTips === 0){
-        showError("Total tips can't be 0");
+        handleError("Total tips can't be 0");
         return;
     }
      if(tableErrorFound()){
-        showError(tableError);
+        handleError(tableError);
         tableError = "";
         return;
     }
@@ -264,7 +269,7 @@ calculateBtn.addEventListener("click", function(){
 
     // if there are no waiters at all
     if(!waitersArr.length){
-        showError("Error, no waiters in the table");
+        handleError("Error, no waiters in the table");
         return;
     }
 
@@ -276,8 +281,7 @@ calculateBtn.addEventListener("click", function(){
     calculateRoleRevenue(waitersArr, totalTips, 100, totalWaiterHours, waitersPerHourEl, "Waiters Per Hour:");
 
     // activate buttons
-    addBtn.disabled = false;
-    deleteBtn.disabled = false;
+    activateTableButtons();
 });
 
 function sortStaff(){
@@ -376,7 +380,7 @@ function calculateAffairs(totalTips){
         totalHostessHoursEl.textContent = "Total Hostess Hours: " + totalHostessHours;
     }
     else{
-        setZero(totalRunnersHoursEl, runnersPerHourEl, "Total Runners Hours:", "Runners Per Hour:");
+        setZero(totalHostessHoursEl, hostessPerHourEl, "Total Hostess Hours:", "Hostess Per Hour:");
     }
     //to restaurant calculations
     let toRestaurant = round(settingsArr[waitersSettingPlace] * totalWaiterHours, 2);
@@ -437,6 +441,11 @@ function round(num, decimalPlace){
     return parseFloat(result);
 }
 
+function handleError(error){
+    showError(error);
+    activateTableButtons();
+}
+
 function showError(error){
   // Add the "show" class to DIV
   errorEl.textContent = error;
@@ -468,4 +477,14 @@ function resetStaff(){
     totalExpoHours = 0;
     totalRunnersHours = 0;
     totalHostessHours = 0;
+}
+
+function activateTableButtons(){
+    addBtn.disabled = false;
+    deleteBtn.disabled = false;
+}
+
+function deactivateTableButtons(){
+    addBtn.disabled = true;
+    deleteBtn.disabled = true;
 }
