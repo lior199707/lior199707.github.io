@@ -386,7 +386,12 @@ function calculateAffairs(totalTips){
     let toRestaurant = round(settingsArr[waitersSettingPlace] * totalWaiterHours, 2);
     toRestaurantEl.textContent = "To The Restaurant: " + toRestaurant;
 
-    return toKitchen + toBartenders + toShiftManager + toBusser + toExpo + toRunners + toRestaurant + toHostess;
+    let affairs_sum = toKitchen + toBartenders + toShiftManager + toBusser + toExpo + toRunners + toRestaurant + toHostess;
+
+    if(affairs_sum > totalTips){
+        showError("The cost of affairs is higher than total tips, but is still calculated in order to give you free choice");
+    }
+    return affairs_sum;
 }
 
 function calculateRoleRevenue(roleArr, totalTips, percentage, totalRoleHours, perHourEl, perHourText){

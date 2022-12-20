@@ -285,7 +285,12 @@ function calculateAffairs(totalTips, totalHours){
     let toHostess = calculateAffairPercentage(settingsArr[hostessSettingPlace], totalTips);
     toHostessEl.textContent = `To Hostess: ${toHostess}`;
 
-    return toRestaurant + toShiftManager + toKitchen + toBartenders + toBusser + toExpo + toRunners + toHostess;
+    let affairs_sum = toRestaurant + toShiftManager + toKitchen + toBartenders + toBusser + toExpo + toRunners + toHostess;
+
+    if(affairs_sum > totalTips){
+        showError("The cost of affairs is higher than total tips, but is still calculated in order to give you free choice");
+    }
+    return affairs_sum;
 }
 
 // helper function for calculating the affairs
