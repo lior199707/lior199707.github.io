@@ -135,7 +135,7 @@ function tableErrorFound(){
             tableError = "Table can't contain negative numbers";
             return true;
         }
-        if(currHour === 0){
+        if(paeseFloat(currHour) === 0){
             tableError = "Table hours section can't be 0";
             return true;
         }
