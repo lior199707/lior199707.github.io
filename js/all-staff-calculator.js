@@ -278,6 +278,9 @@ calculateBtn.addEventListener("click", function(){
     // waiters calculations
     totalWaitersHoursEl.textContent = "Total Waiters Hours: " + totalWaiterHours;
     totalTips -= totalAffairs;
+    // if(totalTips < 0){
+    //     totalTips = 0;
+    // }
     calculateRoleRevenue(waitersArr, totalTips, 100, totalWaiterHours, waitersPerHourEl, "Waiters Per Hour:");
 
     // activate buttons
