@@ -488,11 +488,19 @@ function resetStaff(){
 }
 
 function activateTableButtons(){
-    addBtn.disabled = false;
-    deleteBtn.disabled = false;
+    setTimeout(function() {
+        // Do something after waiting for 2 seconds
+        addBtn.disabled = false;
+        deleteBtn.disabled = false;
+        addBtn.style.opacity = "1";
+        deleteBtn.style.opacity = "1";
+    }, 1000);
+    
 }
 
 function deactivateTableButtons(){
     addBtn.disabled = true;
     deleteBtn.disabled = true;
+    addBtn.style.opacity = "0.5";
+    deleteBtn.style.opacity = "0.5";
 }
