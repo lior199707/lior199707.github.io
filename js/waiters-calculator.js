@@ -258,7 +258,7 @@ function calculateAffairs(totalTips, totalHours){
 
     // calculate busser affair
     let toBusser = calculateAffairPercentage(settingsArr[busserSettingPlace], totalTips);
-    toBusserEl.textContent = `To Shift Manager: ${toBusser}`;
+    toBusserEl.textContent = `To Busser: ${toBusser}`;
 
     // calculate expo affair
     let toExpo = calculateAffairPercentage(settingsArr[expoSettingPlace], totalTips);
