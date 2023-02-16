@@ -11,6 +11,7 @@ A website to help mutual tips restaurants divide the tips (earned in a shift) be
 The website provides different methods for dividing the tips between the employees.
 1) The settings:
    The settings are used to determine the percentage of total tips that goes to each restaurant role (excep waiters).
+   
    ![image](https://user-images.githubusercontent.com/40609600/219379354-5f042859-7f84-4c27-9b00-0cee34e7e5e3.png)
 
 2) Waiters calculator: 
@@ -30,11 +31,14 @@ The website also has a "Contact Us" page which sends direct emails.
 ## Usage
 
 Enter the [website](https://waiterscalculator.com/index.html) to go to the waiters calculator page.
-All the calculator are accessible from the navigation menu, in order to open it hover(computer) or press(phone) the below:
-![image](https://user-images.githubusercontent.com/40609600/219376444-871a80b3-8130-4478-8739-de429a8b31c1.png)
+
+All the calculator are accessible from the navigation menu, in order to open it hover(computer) or press(phone) the top of the page:
+
+![image](https://user-images.githubusercontent.com/40609600/219380026-e6e359c4-9fe5-41ff-a4fa-34f4ae1db3e9.png)
 
 And this menu will be open:
-![image](https://user-images.githubusercontent.com/40609600/219348946-1a67fbf3-6ae9-4510-87ea-d95eeddc6514.png)
+
+![image](https://user-images.githubusercontent.com/40609600/219379916-4991454e-2ca1-4c4d-a8ac-3045c9731ca3.png)
 
 ## Tools in use
 
