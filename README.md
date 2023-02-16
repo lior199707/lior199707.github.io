@@ -44,7 +44,7 @@ And this menu will be open:
 
 * javascript 
 * css
-*html 
-* google analytics 
+* html 
+* Google Analytics 
 * SmtpJS for sending the emails. 
 * Local Storage for saving the settings the user defined.
