@@ -10,7 +10,7 @@ A website to help mutual tips restaurants divide the tips (earned in a shift) be
 
 The website provides different methods for dividing the tips between the employees.
 1) The settings:
-   The settings are used to determine the percentage of total tips that goes to each restaurant role (excep waiters).
+   The settings are used to determine the percentage of total tips that goes to each restaurant role (excep waiters) and are saved so the user won't have to fill them    every time he opens the webstite. 
    
    ![image](https://user-images.githubusercontent.com/40609600/219379354-5f042859-7f84-4c27-9b00-0cee34e7e5e3.png)
 
@@ -47,3 +47,4 @@ And this menu will be open:
 *html 
 * google analytics 
 * SmtpJS for sending the emails. 
+* Local Storage for saving the settings the user defined.
