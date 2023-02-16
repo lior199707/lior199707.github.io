@@ -10,8 +10,9 @@ A website to help mutual tips restaurants divide the tips (earned in a shift) be
 
 The website provides different methods for dividing the tips between the employees.
 1) The settings:
-![image](https://user-images.githubusercontent.com/40609600/219350777-4b2d395e-386b-4896-9d3e-fdf5dc8949fb.png)
    The settings are used to determine the percentage of total tips that goes to each restaurant role (excep waiters).
+   ![image](https://user-images.githubusercontent.com/40609600/219379354-5f042859-7f84-4c27-9b00-0cee34e7e5e3.png)
+
 2) Waiters calculator: 
 Calculates the amount of money goes to each restaurant role based on the role's percentage defined in the settings and distributes the remainig money betweeen the waiters acording to their hours of work.
 
